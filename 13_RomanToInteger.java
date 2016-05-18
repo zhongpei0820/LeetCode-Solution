@@ -2,8 +2,8 @@
 
 //Input is guaranteed to be within the range from 1 to 3999.
 
-//Idea: Go through the string, convert each char to an integer. Go through the list of integers, if it is greater or equal
-//the next integer, add it to result. Otherwise, substract it from the result
+//Idea: Go through the string, convert each char to an integer. Go through each integer in the array, if it is greater than or equal
+//to the next integer, add it to result. Otherwise, substract it from the result.
 
 public class Solution {
     public int romanToInt(String s) {
