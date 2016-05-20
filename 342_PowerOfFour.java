@@ -15,3 +15,14 @@ public class Solution {
         return result == Math.floor(result);
     }
 }
+
+//Another solution is bit manipulation.
+//If the number is power of 4, it must be power of 2. 
+//Moreover, (num & 0x55555555) == num
+
+public class Solution {
+    public boolean isPowerOfFour(int num) {
+        if(num < 1) return false;
+        return ((num & 0x55555555) == num) && ((num & (num -1)) == 0);
+    }
+}
