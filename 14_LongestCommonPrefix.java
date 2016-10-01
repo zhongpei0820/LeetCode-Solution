@@ -33,4 +33,4 @@ public class Solution {
 }
 
 //One way to improve this solution is using divide and conquer. Now that we know that LCS(LCS(str[0],str[1])...str[n]),
-//We can also do LCS(LCS(str[0],str[1]),LCS(str[2],LCS[3])...).
+//We can also do LCS(LCS(str[0],...,str[n/2]),LCS(str[n/2+1],...,LCS[n])).
