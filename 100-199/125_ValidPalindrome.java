@@ -10,7 +10,7 @@
 // For the purpose of this problem, we define empty string as valid palindrome.
 
 // Solution:
-// Obiviously, we can use two pointers strating from 0 and s.length() - 1 respectively.
+// Obivously, we can use two pointers strating from 0 and s.length() - 1 respectively.
 // Since considering only aplpanumeric characters, and ignoring cases. First convert the string to lower case.
 // Then, when the pointer is pointing at a non-aplphnumeric charcter, just skip it.
 
