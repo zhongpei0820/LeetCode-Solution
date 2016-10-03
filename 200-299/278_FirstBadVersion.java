@@ -9,7 +9,8 @@
 // First we check the mid, if mid is bad, the first bad version may appear in the versions before mid.
 // If all versions before mid is good, then the first bad version is mid.
 // If mid is good, the first bad version appears in the versions after mid.
-// If mid is bad, set high to mid. If mid is good, set low to mid + 1. At last, if low == high, it is the first bad version.
+// If mid is bad, set high to mid. If mid is good, set low to mid + 1, because the first bad version may appear at mid + 1 to high.
+// If low >= high, the last low is the first bad version.
 
 public class Solution extends VersionControl {
     public int firstBadVersion(int n) {
