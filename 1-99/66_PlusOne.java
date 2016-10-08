@@ -29,3 +29,23 @@ public class Solution {
         return digits;
     }
 }
+
+
+public class Solution {
+    public int[] plusOne(int[] digits) {
+        int i = digits.length - 1;
+        while(i >= 0){
+            digits[i] += 1;
+            if(digits[i] > 9 && i != 0) digits[i--] -= 10;
+            else break;
+        }
+        if(digits[i] < 10) return digits;
+        int[] ret = new int[digits.length + 1];
+        ret[0] = 1;
+        ret[1] = digits[0] - 10;
+        for(int j = 2; j < ret.length; j++){
+            ret[j] = digits[j - 1];
+        }
+        return ret;
+    }
+}
