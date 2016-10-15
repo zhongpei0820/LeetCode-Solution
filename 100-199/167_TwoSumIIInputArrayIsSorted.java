@@ -13,15 +13,49 @@ public class Solution {
     public int[] twoSum(int[] numbers, int target) {
         int[] res = new int[2];
         for(int i = 0; i < numbers.length; i++){
-            int temp = Arrays.binarySearch(numbers,target - numbers[i]);
-            if(temp >= 0 && temp != i){
-                res[0] = (temp < i) ? temp + 1: i + 1;
-                res[1] = (temp > i) ? temp + 1: i + 1;
+            int temp = binarySearch(i + 1,numbers.length - 1,target - numbers[i],numbers);
+            if(temp != -1){
+                res[0] = i + 1;
+                res[1] = temp + 1;
+                return res;
+            }
+        }
+        return res;
+    }
+    private int binarySearch(int low, int high, int target, int[] array){
+        if(low > high) return -1;
+        int mid = low + (high - low) / 2;
+        if(array[mid] == target) return mid;
+        if(array[mid] > target) return binarySearch(low, mid - 1, target, array);
+        return binarySearch(mid + 1, high, target, array);
+    }
+}
+
+
+// Solution 2: 
+// Because numbers are sorted, use two pointers to traverse the array.
+// i = 0, j = numbers.length - 1
+// numbers[i] + numbers[j] < target, i++
+// numbers[i] + numbers[j] > target, j--
+// numbers[i] + numbers[j] == target, return.
+
+public class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        int[] res = new int[2];
+        int i = 0, j = numbers.length - 1;
+        while(i < j){
+            int key = numbers[i] + numbers[j];
+            if(key < target){
+                i++;
+            }else if(key > target){
+                j--;
+            }else{
+                res[0] = i + 1;
+                res[1] = j + 1;
                 return res;
             }
         }
         return res;
     }
 }
-
 
