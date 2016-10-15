@@ -35,3 +35,20 @@ public class Solution {
        return res;
     }
 }
+
+// A shorter code invoving 2's complement
+// ~(a - 1) == -a 
+
+public class Solution {
+    public int[] singleNumber(int[] nums) {
+        int[] res = new int[2];
+        int xor = 0;
+        for(int num : nums) xor ^= num;
+        xor &= -xor;
+        for(int num : nums){
+            int index = (num & xor) == 0 ? 0 : 1;
+            res[index] ^= num;
+        }
+        return res;
+    }
+}
