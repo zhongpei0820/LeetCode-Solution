@@ -36,7 +36,7 @@
 // When there is only one element: The probablity = 100%
 // When there are two elements: P = 50%, since we randomly choose from that two.
 // When there are three elements: P(choose the thrid one) = 1 / 3, since we randomly generate number between 1, 2 and 3.
-// P(choose the first one) = 50% * (1 - 1 / 3) = 50% * 2 / 3 = 1 / 3.
+// P(choose the first one) = 50% * (1 - 1 / 3) = 50% * 2 / 3 = 1 / 3. (P(choose first one in previous step) * P(choose first one in current step))
 // The same goes to P(choose the second one) = 1 / 3.
 
 // Reservior Sampling Wiki : https://en.wikipedia.org/wiki/Reservoir_sampling
