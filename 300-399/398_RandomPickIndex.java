@@ -22,6 +22,7 @@
 // P(second target) = 50%
 // P(third target) = 33.333...%
 // So on so forth.
+// How to ensure the equal probability : random number.
 
 public class Solution {
 
