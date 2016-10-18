@@ -34,3 +34,24 @@ public class Solution {
     }
 }
 
+// A better version for this problem, since there are only three colors.
+
+public class Solution {
+    public int minCost(int[][] costs) {
+        if(costs.length == 0) return 0;
+        int m = costs.length;
+        int currRed = costs[0][0];
+        int currBlue = costs[0][1];
+        int currGreen = costs[0][2];
+        
+        for(int i = 1; i < m; i++){
+            int lastRed = currRed;
+            int lastBlue = currBlue;
+            int lastGreen = currGreen;
+            currRed = Math.min(lastBlue,lastGreen) + costs[i][0];
+            currBlue = Math.min(lastRed,lastGreen) + costs[i][1];
+            currGreen = Math.min(lastRed,lastBlue) + costs[i][2];
+        }
+        return Math.min(currRed,Math.min(currBlue,currGreen));
+    }
+}
