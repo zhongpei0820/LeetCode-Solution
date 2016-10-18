@@ -40,7 +40,7 @@ public class Solution {
 // Only have to store the smallest two costs in last painting.
 // Since no same colors for adjacent houses, just select 2nd min cost color for i.
 
-	public class Solution {
+public class Solution {
     public int minCostII(int[][] costs) {
         if(costs.length == 0) return 0;
         int m = costs.length, n = costs[0].length;
