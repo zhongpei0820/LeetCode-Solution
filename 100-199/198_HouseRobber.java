@@ -22,3 +22,19 @@ public class Solution {
         return max[max.length - 1];
     }
 }
+
+
+// A shorter version
+
+public class Solution {
+    public int rob(int[] nums) {
+        if(nums.length == 0) return 0;
+        int n = nums.length;
+        int[] max = new int[n + 1];
+        max[1] = nums[0];
+        for(int i = 2; i < n + 1; i++){
+            max[i] = Math.max(max[i - 2] + nums[i - 1], max[i - 1]);
+        }
+        return max[n];
+    }
+}
