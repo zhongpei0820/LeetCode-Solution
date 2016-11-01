@@ -38,3 +38,15 @@ public class Solution {
         return max[n];
     }
 }
+
+public class Solution {
+    public int rob(int[] nums) {
+        int prev = 0,curr = 0;
+        for(int i = 0; i < nums.length; i++){
+            int temp = prev;
+            prev = curr;
+            curr = Math.max(temp + nums[i], curr);
+        }
+        return curr;
+    }
+}

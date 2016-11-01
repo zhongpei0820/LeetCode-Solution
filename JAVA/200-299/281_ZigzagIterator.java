@@ -17,7 +17,7 @@
 // It should return [1,4,8,2,5,9,3,6,7].
 
 // Solution:
-// Iterate both lists, if index % 2 == 0, get element from the first list, else get from another list.
+// Iterate both lists use two pointers, if index % 2 == 0, get element from the first list, else get from another list.
 // If p1 > list1.size(), get element from list2.
 // If p2 > list2.size(), get element from list1.
 
