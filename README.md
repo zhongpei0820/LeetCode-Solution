@@ -1,4 +1,4 @@
-# LeetCodeInJava
+# LeetCode Solution
 
-My Leetcode solution.
+Keep a record of my Leetcode solution.
 
