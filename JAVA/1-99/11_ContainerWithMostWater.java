@@ -9,6 +9,12 @@
 //        if height[left] < height[right]: left++
 //        else: right++
 
+// // # Solution:
+// # Starting from both sides, left and right, compute the area between left and right.
+// # Then move left and right to find a possible larger area.
+// # a possible larger area must have higher lines than the previous area.
+// # So we find the new left and right which are greater than min(left,right)
+
 // Proof:
 // if we have a1,a2,a3 ... a20, and the max area is between a10 and a15.
 // If the left pointer is pointing at a10, how can we be sure the right pointer can be moved to a15 while the left is pointint at a10.
@@ -22,9 +28,10 @@ public class Solution {
     public int maxArea(int[] height) {
         int left = 0,right = height.length - 1,max = 0;
         while(left < right){
-            max = Math.max(max,(right - left) * Math.min(height[left],height[right]));
-            if(height[left] < height[right]) left++;
-            else right--;
+            int h = Math.min(height[left],height[right]);
+            max = Math.max(max,(right - left) * h);
+            while(height[left] <= h && left < right) left++;
+            while(height[right] <= h && left < right) right--;
         }
         return max;
     }
