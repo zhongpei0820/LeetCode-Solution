@@ -32,9 +32,7 @@ class Solution(object):
         return reduce(operator.xor,nums)
 ```
 
-
 ---
-
 
 ##137. Single Number II   
 Given an array of integers, every element appears three times except for one. Find that single one.
