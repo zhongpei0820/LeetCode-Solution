@@ -1,4 +1,4 @@
 # Summary
 
-* Bit Manipulation
+* [Bit Manipulation](bit_manipulation.md)
 
