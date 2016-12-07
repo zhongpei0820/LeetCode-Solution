@@ -111,7 +111,7 @@ Your algorithm should run in linear runtime complexity. Could you implement it u
 
 This problem is similar to [136. Single Number](#136). Only this time there are two distinct single number. However, we can still solve this problem by using xor operator.
 
-If we use xor to iterate nums in the given example, the result is 3 or 5, which is 011 ^ 101 = 110.
+If we use xor to iterate nums in the given example, the result is 3 xor 5, which is 011 ^ 101 = 110.
 
 Notice that 110 means 3 and 5 are different in the 2nd bit and 3rd bit. 
 
@@ -119,11 +119,31 @@ With the obeservation above, the idea is using a flag bit to divide the nums int
 
 For example, we can use the either 2nd bit or 3rd bit as the flag to distinguish 3 from 5. Say the flag is 010. All nums & 010 == 0 will be classified into one group, the others will be put in the other group. Obviously, 5 will be in the first group, and 3 will be in the other.
 
-Now that we have an idea to divide nums into two group, the rest is simple: do xor to each of the two groups, we can find the unique one in each group.
+Now that we have an idea to divide nums into two groups, the rest is simple: do xor on each of the groups, then we can find the unique one in each group.
 
-The remaining problem is how to find the flag bit. After finding the xor of 3 and 5, which is 110. How to create the flag bit? Using a simple bit operation, x & ~(x - 1).
+The remaining problem is how to find the flag bit. After finding the xor of 3 and 5, which is 110. How to create the flag bit? 
 
-We know that x - 1 converts all 0 from right to the rightmost 1 to 1, and the rightmost 1 to 0. ~(x - 1) fliped all bits left of the rightmost 1. So x & ~(x - 1) converts all bit to 0 except the rightmost 1. And that is the flag we need.
+The answer is using a simple bit operation : x & ~(x - 1).
+
+First, x - 1 converts all bits from right to the rightmost 1 to 0.
+```
+x     : 1 0 0 0 1 0 ... 0 0 1 0 0 0
+x - 1 : 1 0 0 0 1 0 ... 0 0 0 1 1 1
+```
+Then, ~(x - 1) flips all bits from the rightmost 1 to right.
+
+```
+x        : 1 0 0 0 1 0 ... 0 0 1 0 0 0
+x - 1    : 1 0 0 0 1 0 ... 0 0 0 1 1 1
+~(x - 1) : 0 1 1 1 0 1 ... 1 1 1 0 0 0
+```
+Finally, x & ~(x - 1) converts all bits to 0 excpet the rightmost 1.
+```
+x            : 1 0 0 0 1 0 ... 0 0 1 0 0 0
+~(x - 1)     : 0 1 1 1 0 1 ... 1 1 1 0 0 0
+x & ~(x - 1) : 0 0 0 0 0 0 ... 0 0 1 0 0 0
+```
+And this is the flag we need to divide the nums.
 
 Code:
 ```python
