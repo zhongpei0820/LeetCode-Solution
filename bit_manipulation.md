@@ -141,6 +141,51 @@ class Solution(object):
 ```
 ---
 
+##187. Repeated DNA Sequences
+All DNA is composed of a series of nucleotides abbreviated as A, C, G, and T, for example: "ACGAATTCCG". When studying DNA, it is sometimes useful to identify repeated sequences within the DNA.
+
+Write a function to find all the 10-letter-long sequences (substrings) that occur more than once in a DNA molecule.
+```
+For example,
+
+Given s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT",
+
+Return:
+["AAAAACCCCC", "CCCCCAAAAA"].
+```
+
+**Solution**:
+Although this problem can be solved by a simly hash table.
+Let's try bit manipulation.
+The key idea is that only 4 characters in DNA, can be represent in 2 bits : 00 01 10 11.
+Thus, "AAAAACCCCC" can be represented by 0000000010101010, and we can put this as a key to the hashset.
+
+Code:
+```python
+class Solution(object):
+    def findRepeatedDnaSequences(self, s):
+        """
+        :type s: str
+        :rtype: List[str]
+        """
+        dict = {'A' : 0, 'C' : 1, 'G' : 2, 'T' : 3}
+        once = {}
+        twice = {}
+        ret = []
+        for i in range(0,len(s) - 9):
+            v = 0
+            for c in s[i : i + 10]:
+                v |= dict[c]
+                v <<= 2
+            if v in once and v not in twice:
+                ret.append(s[i : i + 10])
+                twice[v] = v
+            else:
+                once[v] = v
+        return ret
+```
+---
+
 
 
 ##191. Number of 1 Bits
