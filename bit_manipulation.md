@@ -186,8 +186,49 @@ class Solution(object):
 ```
 ---
 
+##190. Reverse Bits
+Reverse bits of a given 32 bits unsigned integer.
+
+For example, given input 43261596 (represented in binary as 00000010100101000001111010011100), return 964176192 (represented in binary as 00111001011110000010100101000000).
+
+**Solution**:
+
+ For example: ABCDEFGH
+ ```
+ ABCDEFGH >> 4 = 0000ABCD
+ ABCDEFGH << 4 = EFGH0000
+ 0000ABCD | EFGH0000 = EFGHABCD
+ 
+ EFGHABCD & 00110011 = 00GH00CD
+ EFGHABCD & 11001100 = EF00AB00
+ 00GH00CD << 2 = GH00CD00
+ EF00AB00 >> 2 = 00EF00AB
+ GH00CD00 & 00EF00AB = GHEFCDAB
+ 
+ GHEFCDAB & 01010101 = 0H0F0D0B
+ GHEFCDAB & 10101010 = G0E0C0A0
+ 0H0F0D0B << 1 = H0F0D0B0
+ G0E0C0A0 >> 1 = 0G0E0C0A
+ H0F0D0B0 | 0G0E0C0A = HGFEDCBA
+ Reversed!
+ ```
+
+Code:
+```python
+class Solution:
+    # @param n, an integer
+    # @return an integer
+    def reverseBits(self, n):
+        n = (n >> 16) | (n << 16)
+        n = ((n & 0xFF00FF00) >> 8) | ((n & 0x00FF00FF) << 8)
+        n = ((n & 0xF0F0F0F0) >> 4) | ((n & 0x0F0F0F0F) << 4)
+        n = ((n & 0xCCCCCCCC) >> 2) | ((n & 0x33333333) << 2)
+        n = ((n & 0xAAAAAAAA) >> 1) | ((n & 0x55555555) << 1)
+        return n
+```
 
 
+---
 ##191. Number of 1 Bits
 
 Write a function that takes an unsigned integer and returns the number of ’1' bits it has (also known as the Hamming weight).
@@ -217,7 +258,26 @@ class Solution(object):
 ```
 ---
 
+##231. Power of Two
+Given an integer, write a function to determine if it is a power of two.
 
+**Solution** : 
+n & (n - 1) sets the rightmost 1 to 0.
+Any number is power of 4 any has only 1 in binary form.
+If n & (n - 1) == 0, it is power of 2. Otherwise, it is not.
+Except 0.
+
+Code:
+```python
+class Solution(object):
+    def isPowerOfTwo(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        return n > 0 and not n & (n - 1)
+```
+---
 ##260. Single Number III
 Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.
 
