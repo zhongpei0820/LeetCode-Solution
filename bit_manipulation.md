@@ -1,4 +1,29 @@
 # Bit Manipulation
+##Some Basic Tricks
+###& Tricks
+**Count number of 1**
+
+```python
+def CountNumberOfOne(num):
+    count = 0
+    while num :
+        num &= (num - 1)
+        count += 1
+    return count
+```
+
+**Power of Two**
+```python
+def isPowerOfTwo(num):
+    return num > 0 and not num & num - 1
+```
+
+**Power of Four**
+```python
+def isPowerOfFour(num):
+        return num != 0 and not num & num - 1 and num & 0x55555555 != 0
+```
+
 ##136. Single Number{#136}
 Given an array of integers, every element appears twice except for one. Find that single one.
 
