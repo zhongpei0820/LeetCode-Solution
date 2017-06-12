@@ -1,4 +1,7 @@
-# Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.Example:
+# Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.
+#
+#Example:
+#
 #nums = [1, 2, 3]
 #target = 4
 #
@@ -14,11 +17,15 @@
 #Note that different sequences are counted as different combinations.
 #
 #Therefore the output is 7.
+#
+#
+#
 #Follow up:
 #What if negative numbers are allowed in the given array?
 #How does it change the problem?
-#What limitation we need to add to the question to allow negative numbers? Credits:Special thanks to @pbrother for adding this problem and creating all test cases.
-
+#What limitation we need to add to the question to allow negative numbers? 
+#
+#Credits:Special thanks to @pbrother for adding this problem and creating all test cases.
 class Solution(object):
     def combinationSum4(self, nums, target):
         """

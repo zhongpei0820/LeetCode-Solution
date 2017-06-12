@@ -1,13 +1,15 @@
 #
 #Given a string s, return all the palindromic permutations (without duplicates) of it. Return an empty list if no palindromic permutation could be form.
 #
+#
 #For example:
+#
 #
 #Given s = "aabb", return ["abba", "baab"].
 #
+#
 #Given s = "abc", return [].
-#Hint:
-
+#
 from collections import Counter
 class Solution(object):
     def generatePalindromes(self, s):
@@ -40,4 +42,3 @@ class Solution(object):
             if i < len(currStr) and currStr[i] == half[index] : break
                     
         
-
