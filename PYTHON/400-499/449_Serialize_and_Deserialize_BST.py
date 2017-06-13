@@ -9,6 +9,7 @@
 #
 #Note: Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.
 #
+
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):

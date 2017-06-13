@@ -8,6 +8,7 @@
 #
 #
 #Credits:Special thanks to @mithmatt for adding this problem, creating the above image and all test cases.
+
 class Solution(object):
     def computeArea(self, A, B, C, D, E, F, G, H):
         """

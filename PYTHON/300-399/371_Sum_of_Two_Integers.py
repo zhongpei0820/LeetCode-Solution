@@ -5,6 +5,7 @@
 #
 #
 #Credits:Special thanks to @fujiaozhu for adding this problem and creating all test cases.
+
 class Solution(object):
     def getSum(self, a, b):
         """

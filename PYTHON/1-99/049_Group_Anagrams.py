@@ -11,6 +11,7 @@
 #]
 #
 #Note: All inputs will be in lower-case.
+
 class Solution(object):
     def groupAnagrams(self, strs):
         """

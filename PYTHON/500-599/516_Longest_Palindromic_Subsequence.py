@@ -25,6 +25,7 @@
 #
 #One possible longest palindromic subsequence is "bb".
 #
+
 class Solution(object):
     def longestPalindromeSubseq(self, s):
         """

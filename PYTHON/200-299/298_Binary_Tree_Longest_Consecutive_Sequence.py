@@ -29,6 +29,7 @@
 #Longest consecutive sequence path is 2-3,not3-2-1, so return 2.
 #
 #
+
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):

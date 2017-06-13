@@ -17,6 +17,7 @@
 #Explanation:
 #'e' is the letter that was added.
 #
+
 class Solution(object):
     def findTheDifference(self, s, t):
         """

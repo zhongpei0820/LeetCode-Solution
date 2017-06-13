@@ -28,6 +28,7 @@
 #You may assume that row1 &le; row2 and col1 &le; col2.
 #
 #
+
 class NumMatrix(object):
     def __init__(self, matrix):
         """

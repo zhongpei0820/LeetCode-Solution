@@ -30,6 +30,7 @@
 #You need to output 2.
 #
 #
+
 class Solution(object):
     def findContentChildren(self, g, s):
         """

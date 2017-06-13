@@ -11,6 +11,7 @@
 #
 #T is "ece" which its length is 3.
 #
+
 class Solution(object):
     def lengthOfLongestSubstringKDistinct(self, s, k):
         """

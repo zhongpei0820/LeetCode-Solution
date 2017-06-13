@@ -29,6 +29,7 @@
 #
 #
 #Credits:Special thanks to @memoryless for adding this problem and creating all test cases.
+
 class Logger(object):
 
     def __init__(self):

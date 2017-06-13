@@ -12,6 +12,7 @@
 #   2     1         2                 3
 #
 #
+
 class Solution(object):
     def numTrees(self, n):
         """

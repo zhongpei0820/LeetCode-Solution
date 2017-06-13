@@ -9,6 +9,7 @@
 #m.next(5) = (10 + 3 + 5) / 3
 #
 #
+
 from collections import deque
 class MovingAverage(object):
 

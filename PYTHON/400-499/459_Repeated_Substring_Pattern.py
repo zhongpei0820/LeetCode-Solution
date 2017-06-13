@@ -27,6 +27,7 @@
 #Explanation: It's the substring "abc" four times. (And the substring "abcabc" twice.)
 #
 #
+
 class Solution(object):
     def repeatedSubstringPattern(self, str):
         """

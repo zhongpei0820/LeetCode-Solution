@@ -33,6 +33,7 @@
 #String S is non-empty.
 #
 #
+
 class Solution(object):
     def licenseKeyFormatting(self, S, K):
         """

@@ -16,6 +16,7 @@
 #
 #
 #Credits:Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.
+
 class Solution(object):
     def singleNumber(self, nums):
         """

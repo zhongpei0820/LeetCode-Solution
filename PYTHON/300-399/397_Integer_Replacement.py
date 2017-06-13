@@ -42,6 +42,7 @@
 #7 -> 6 -> 3 -> 2 -> 1
 #
 #
+
 class Solution(object):
     def integerReplacement(self, n):
         """

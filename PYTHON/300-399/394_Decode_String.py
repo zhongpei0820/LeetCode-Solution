@@ -17,6 +17,7 @@
 #s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 #
 #
+
 class Solution(object):
     def decodeString(self, s):
         """

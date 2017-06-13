@@ -3,6 +3,7 @@
 #For example,
 #"code" -> False, "aab" -> True, "carerac" -> True.
 #
+
 from collections import Counter
 class Solution(object):
     def canPermutePalindrome(self, s):

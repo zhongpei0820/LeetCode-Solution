@@ -21,6 +21,7 @@
 #
 #Follow up:
 #Could you solve it in linear time?
+
 from collections import deque
 class Solution(object):
     def maxSlidingWindow(self, nums, k):

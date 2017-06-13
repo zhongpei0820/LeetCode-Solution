@@ -37,6 +37,7 @@
 #twitter.getNewsFeed(1);
 #
 #
+
 class Twitter(object):
 
     def __init__(self):

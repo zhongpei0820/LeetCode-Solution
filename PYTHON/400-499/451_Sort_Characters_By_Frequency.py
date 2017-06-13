@@ -41,6 +41,7 @@
 #Note that 'A' and 'a' are treated as two different characters.
 #
 #
+
 class Solution(object):
     def frequencySort(self, s):
         """

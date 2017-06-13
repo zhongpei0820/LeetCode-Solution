@@ -9,6 +9,7 @@
 #Follow up: Could you solve it without loops/recursion?
 #
 #Credits:Special thanks to @yukuairoy  for adding this problem and creating all test cases.
+
 class Solution(object):
     def isPowerOfFour(self, num):
         """

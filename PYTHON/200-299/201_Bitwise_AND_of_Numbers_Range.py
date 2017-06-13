@@ -5,6 +5,7 @@
 #
 #
 #Credits:Special thanks to @amrsaqr for adding this problem and creating all test cases.
+
 class Solution(object):
     def rangeBitwiseAnd(self, m, n):
         """

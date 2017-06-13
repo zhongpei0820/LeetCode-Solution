@@ -13,6 +13,7 @@
 #Could you devise a constant space solution?
 #
 #
+
 class Solution(object):
     def setZeroes(self, matrix):
         """

@@ -10,6 +10,7 @@
 #Related problem: Reverse Integer
 #
 #Credits:Special thanks to @ts for adding this problem and creating all test cases.
+
 class Solution:
     # @param n, an integer
     # @return an integer

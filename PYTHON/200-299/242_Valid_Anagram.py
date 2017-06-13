@@ -10,6 +10,7 @@
 #
 #Follow up:
 #What if the inputs contain unicode characters? How would you adapt your solution to such case?
+
 class Solution(object):
     def isAnagram(self, s, t):
         """

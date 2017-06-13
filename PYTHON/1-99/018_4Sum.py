@@ -13,6 +13,7 @@
 #  [-2,  0, 0, 2]
 #]
 #
+
 class Solution(object):
     def fourSum(self, nums, target):
         """

@@ -43,6 +43,7 @@
 #Explanation: The first 6 elements of magical string S is "12211" and it contains three 1's, so return 3.
 #
 #
+
 class Solution(object):
     def magicalString(self, n):
         """

@@ -26,6 +26,7 @@
 #The input string will only contain the character 'D' and 'I'.
 #The length of input string is a positive integer and will not exceed 10,000
 #
+
 class Solution(object):
     def findPermutation(self, s):
         """

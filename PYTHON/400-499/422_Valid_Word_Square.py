@@ -75,6 +75,7 @@
 #Therefore, it is NOT a valid word square.
 #
 #
+
 class Solution(object):
     def validWordSquare(self, words):
         """

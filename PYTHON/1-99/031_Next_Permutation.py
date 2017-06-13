@@ -13,6 +13,7 @@
 #3,2,1 &#8594; 1,2,3
 #1,1,5 &#8594; 1,5,1
 #
+
 class Solution(object):
     def nextPermutation(self, nums):
         """

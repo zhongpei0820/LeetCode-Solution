@@ -12,6 +12,7 @@
 #  ["acef"],
 #  ["a","z"]
 #]
+
 class Solution(object):
     def groupStrings(self, strings):
         """

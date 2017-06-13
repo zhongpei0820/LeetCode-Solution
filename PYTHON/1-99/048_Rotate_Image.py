@@ -2,6 +2,7 @@
 #Rotate the image by 90 degrees (clockwise).
 #Follow up:
 #Could you do this in-place?
+
 class Solution(object):
     def rotate(self, matrix):
         """

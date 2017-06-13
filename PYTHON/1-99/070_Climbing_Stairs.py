@@ -5,6 +5,7 @@
 #
 #Note: Given n will be a positive integer.
 #
+
 class Solution(object):
     def climbStairs(self, n):
         """

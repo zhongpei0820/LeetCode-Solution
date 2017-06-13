@@ -17,6 +17,7 @@
 #
 #Note:
 #There will be at least one building. If it is not possible to build such house according to the above rules, return -1.
+
 import sys
 import collections
 class Solution(object):

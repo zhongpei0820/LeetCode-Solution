@@ -18,6 +18,7 @@
 #You may assume the number of calls to update and sumRange function is distributed evenly.
 #
 #
+
 class NumArray(object):
     def __init__(self, nums):
         """

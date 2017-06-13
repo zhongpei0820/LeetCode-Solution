@@ -21,6 +21,7 @@
 #Length of the array will not exceed 10^4. 
 #
 #
+
 class Solution(object):
     def totalHammingDistance(self, nums):
         """

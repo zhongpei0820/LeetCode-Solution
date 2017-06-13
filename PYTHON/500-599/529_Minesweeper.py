@@ -69,6 +69,7 @@
 #For simplicity, not mentioned rules should be ignored in this problem. For example, you don't need to reveal all the unrevealed mines when the game is over, consider any cases that you will win the game or flag any squares.
 #
 #
+
 class Solution(object):
     def updateBoard(self, board, click):
         """

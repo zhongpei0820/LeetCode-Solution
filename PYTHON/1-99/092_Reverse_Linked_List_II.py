@@ -14,6 +14,7 @@
 #Given m, n satisfy the following condition:
 #1 ≤ m ≤ n ≤ length of list.
 #
+
 # Definition for singly-linked list.
 # class ListNode(object):
 #     def __init__(self, x):

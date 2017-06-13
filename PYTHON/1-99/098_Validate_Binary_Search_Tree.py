@@ -28,6 +28,7 @@
 #
 #Binary tree [1,2,3], return false.
 #
+
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):

@@ -65,6 +65,7 @@
 #The character '-' signifies an empty space on the screen.
 #
 #
+
 class Solution(object):
     def wordsTyping(self, sentence, rows, cols):
         """

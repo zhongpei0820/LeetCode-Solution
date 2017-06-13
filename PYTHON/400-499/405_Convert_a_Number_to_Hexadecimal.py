@@ -30,6 +30,7 @@
 #"ffffffff"
 #
 #
+
 class Solution(object):
     def toHex(self, num):
         """

@@ -11,6 +11,7 @@
 #Return:
 #["AAAAACCCCC", "CCCCCAAAAA"].
 #
+
 from sets import Set
 class Solution(object):
     def findRepeatedDnaSequences(self, s):

@@ -46,6 +46,7 @@
 #The range of dresses number in a super washing machine is [0, 1e5].
 #
 #
+
 class Solution(object):
     def findMinMoves(self, machines):
         """

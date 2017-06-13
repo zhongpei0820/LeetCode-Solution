@@ -21,6 +21,7 @@
 #
 #
 #Given target = 3, return true.
+
 class Solution(object):
     def searchMatrix(self, matrix, target):
         """

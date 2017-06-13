@@ -58,6 +58,7 @@
 #Explanation: This is neither a IPv4 address nor a IPv6 address.
 #
 #
+
 class Solution(object):
     def validIPAddress(self, IP):
         """

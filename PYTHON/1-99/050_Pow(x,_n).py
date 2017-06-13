@@ -1,5 +1,6 @@
 #Implement pow(x, n).
 #
+
 class Solution(object):
     def myPow(self, x, n):
         """
